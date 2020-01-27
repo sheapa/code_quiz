@@ -32,12 +32,20 @@
 
     <div class="container">
         <!--Title and instructions. I want to hide this section after the quiz begins.-->
-        <div id="intructions" class="hide">
+        <div id="intruction" class="hide">
             <h1>Code Quiz</h1>
                 <p>Please follow the prompt below to begin your quiz. Answer all questions to the best of your ability. Questions are on a 25 second timer. Good Luck! </p>
             <!--Start button for quiz.-->
             <button id="start">Begin Quiz!</button>
         </div>
+
+        <!--Quiz Questions-->
+        <div id="prompt" class="hidden">
+            <h3 id="question"></h3>
+            <ul id="answer"></ul>
+            <div id="result"></div>
+        </div>
+
     </div>
 
     <!--Custom JS Link-->
