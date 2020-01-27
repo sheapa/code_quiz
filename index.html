@@ -15,7 +15,7 @@
     <title>Code Quiz by sheapa</title>
   </head>
   <body>
-      
+
     <header>
         <!--NavBar for High Scores and Timer-->
         <div class="container-fluid">      
@@ -31,9 +31,13 @@
     </header>
 
     <div class="container">
-        <!--Title and instructions.-->
-        <h1>Code Quiz</h1>
-            <p>Please follow the prompt below to begin your quiz. Answer all questions to the best of your ability. Questions are on a 25 second timer. Good Luck! </p>
+        <!--Title and instructions. I want to hide this section after the quiz begins.-->
+        <div id="intructions" class="hide">
+            <h1>Code Quiz</h1>
+                <p>Please follow the prompt below to begin your quiz. Answer all questions to the best of your ability. Questions are on a 25 second timer. Good Luck! </p>
+            <!--Start button for quiz.-->
+            <button id="start">Begin Quiz!</button>
+        </div>
     </div>
 
     <!--Custom JS Link-->
