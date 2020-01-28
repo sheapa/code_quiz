@@ -28,3 +28,27 @@ var score = 70;
 //Time tracker variables.
 var interval;
 var time = 25;
+
+//Array of objects for questions. Used questions from demo. because lazy.
+var questionArray = [
+    {
+        question: "Commonly used data types DO NOT include:",
+        choices: ["strings", "booleans", "alerts", "numbers"],
+        answer: "alerts"
+      },
+      {
+        question: "The condition in an if / else statement is enclosed within ____.",
+        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+        answer: "parentheses"
+      },
+      {
+        question: "String vlaues must be enclosed within _____ when being assigned to variables.",
+        choices: ["commas", "curly braces", "quotes", "parentheses"],
+        answer: "quotes"
+      },
+      {
+        question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        choices: ["JavaScript", "terminal/bash", "for loops", "console.log"],
+        answer: "console.log"
+      }
+]
