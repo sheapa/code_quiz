@@ -1,7 +1,7 @@
 //My Variables
 
 //Timer
-var timerTracker = document.querySelector("#timer");
+var timeTracker = document.querySelector("#timer");
 //Score
 var scoreTracker = document.querySelector(".score");
 //start Button aKa "Begin Quiz"
@@ -52,3 +52,25 @@ var questionArray = [
         answer: "console.log"
       }
 ]
+
+//Start Button
+startBtn.addEventListener("click", (e) => {
+
+    timeTracker.textContent = time;
+
+    startTimer();
+
+});
+
+//Timer Function
+function startTimer() {
+    interval = setInterval(function() {
+        if (time === 0) {
+            renderScore();
+            return;
+        }
+
+        time--;
+        timeTracker.textContent = time;
+    }, 1000);
+}
