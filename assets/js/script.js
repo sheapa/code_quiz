@@ -64,6 +64,8 @@ startBtn.addEventListener("click", (e) => {
 
 //Timer Function
 function startTimer() {
+    questionCounter = 0;
+    renderQuestion(questionCounter);
     interval = setInterval(function() {
         if (time === 0) {
             renderScore();
@@ -73,4 +75,31 @@ function startTimer() {
         time--;
         timeTracker.textContent = time;
     }, 1000);
+}
+
+//Show Score Function
+function renderScore() {
+    clearInterval(interval); 
+    prompt.classList.add("hidden");
+    scoreCard.classList.remove("hidden");
+    scoreTracker.textContent = `Correct: ${correct}     Incorrect: ${incorrect}`;
+
+}
+
+//Show Questions & Choices
+function renderQuestion(index) {
+    if (questionCounter === questionArray.length) {
+        renderScore();
+        return;
+
+    } else {
+        prompt.textContent = questionArray[index].question;
+
+        for (var i = 0; i < questionArray[index].choices.length; i++) {
+            var li = document.createElement("li");
+            li.id = i;
+            li.textContent = questionArray[index].choices[i];
+            anwerChoice.append(li);
+        }
+    }
 }
